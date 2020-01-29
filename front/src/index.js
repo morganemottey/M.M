@@ -13,6 +13,7 @@ import reducers from './reducers';
 import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 import ProductsList from "./components/productsList";
+import Footer from "./components/Footer";
 // import Clothing from './components/Clothing'
 // import Logout from './components/Logout'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -33,7 +34,7 @@ ReactDOM.render(
                 <Route path="/about" component={About} />
                 <Route path="/products" component={ProductsList} />
                 <Route path="/cart" component={Cart} />
-                
+                <Footer/>
 
 
                 {/* <Route exact path="/login" component={Login} />

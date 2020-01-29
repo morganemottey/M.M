@@ -5,6 +5,8 @@ import {addToCart} from '../actions/cartActions'
 import {Row, Col} from 'react-bootstrap';
 import ProductItem from "./productItem";
 import Cart from './cart'
+import Header from './Header';
+import Footer from './Footer'
 
 class ProductsList extends React.Component {
     dispachAddToCart(product) {
@@ -25,11 +27,12 @@ class ProductsList extends React.Component {
     render() {
         return (
             <div>
-                <Row><h1>Welcome to EqEx Shopping Cart : Redux</h1></Row>
+                <Header/>
                 <Row><Cart /></Row>
                 <Row style={{margin:'15px'}}>
                     {this.renderProducts()}
                 </Row>
+                <Footer/>
             </div>
         );
     }

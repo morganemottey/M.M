@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from './Header'
 import { bindActionCreators } from 'redux'
 import {connect} from 'react-redux';
 import {deleteFromCart, updateItemUnits} from '../actions/cartActions';
 import {Col, Row, Badge} from 'react-bootstrap';
 import CartItem from "./cartItem";
+
 
 class Cart extends React.Component {
     renderCart() {
@@ -44,7 +46,7 @@ class Cart extends React.Component {
             <div>
                 <Row>
                     <Col xs={12} sm={6}>
-                        <h4>TOTAL: <Badge pullRight>Price: INR {this.totalAmount(this.props.cart)}</Badge></h4>
+                        <h4>TOTAL: <Badge pullRight>Price: $ {this.totalAmount(this.props.cart)}</Badge></h4>
                     </Col>
                 </Row>
             </div>
@@ -58,8 +60,10 @@ class Cart extends React.Component {
     }
 
     render() {
+        
         if (this.props.cart.length !== 0) {
             return (
+                
                 <aside className='cart'>
                     {this.renderCart()}
                     {this.cartTotal()}
@@ -68,6 +72,7 @@ class Cart extends React.Component {
         }
 
         return (
+            
             <aside className='cart'>cart empty</aside>
         );
     }

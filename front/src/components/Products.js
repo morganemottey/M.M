@@ -6,6 +6,7 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 import Cart from './cart'
+import Footer from './Footer'
 
 const items= [
   {
@@ -58,8 +59,9 @@ class Products extends Component {
             ))
           )}
 
-
+        <Footer/>
       </div>
+     
 
     )
   }

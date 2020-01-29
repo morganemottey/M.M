@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-
+import Footer from './Footer'
 
 class Login extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class Login extends Component {
       {' '}
       <Button>Submit</Button>
     </Form>
-
+<Footer/>
       </div>
     )
   }
