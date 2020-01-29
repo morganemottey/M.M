@@ -11,12 +11,7 @@ class Home extends Component {
   render() {
     return (
         <div>
-        <Jumbotron fluid>
-          <Container fluid>
-            <h1 className="display-3">¨¨</h1>
-            <p className="lead">Shop Now.</p>
-          </Container>
-        </Jumbotron>
+        toto
       </div>
     )
   }

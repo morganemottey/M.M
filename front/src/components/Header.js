@@ -26,6 +26,9 @@ const Header = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
+          <NavItem>
+              <NavLink href="/">Home</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink href="/login">Login</NavLink>
             </NavItem>
@@ -33,7 +36,7 @@ const Header = (props) => {
               <NavLink href="/about">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/clothing">Clothing</NavLink>
+              <NavLink href="/products">Clothing</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/cart">Cart</NavLink>

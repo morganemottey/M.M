@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import Header from './components/Header'
+import SlideHome from './components/SlideHome'
 import Footer from './components/Footer'
 import Home from './components/Home'
 
@@ -9,11 +11,16 @@ class App extends Component {
     this.state = {
 
     }
+    
   }
+
+
   render() {
+ 
     return (
       <div>
         <Header/>
+        <SlideHome/>
         <Home/>
         <Footer/>
 
