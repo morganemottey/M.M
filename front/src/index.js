@@ -13,6 +13,7 @@ import reducers from './reducers';
 import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 import ProductsList from "./components/productsList";
+import Test from './components/Test'
 import Footer from "./components/Footer";
 // import Clothing from './components/Clothing'
 // import Logout from './components/Logout'
@@ -23,17 +24,33 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 const middleware = applyMiddleware(logger);
 const store = createStore(reducers, middleware);
 
+const PrivateRoute = (props) => {
+    if (localStorage.getItem("token") )
+        return <Route {...props} />
+    else
+        return <Redirect to='/login'/>
+}
+const PublicRoute = (props) => {
+    
+    if (!localStorage.getItem("token") )
+        return <Route {...props} />
+    else
+        return <Redirect to='/'/>
+        
+}
+
 ReactDOM.render(
     <Provider store={store}>
         <Router>
             <Switch>
             {/* <ProductsList/> */}
-                <Route exact path="/" component={App} />
-                <Route exact path="/home" component ={Home}/>
-                <Route path="/login" component={Login} />
-                <Route path="/about" component={About} />
-                <Route path="/products" component={ProductsList} />
-                <Route path="/cart" component={Cart} />
+                <PrivateRoute exact path="/" component={App} />
+                <PrivateRoute exact path="/home" component ={Home}/>
+                <PublicRoute path="/login" component={Login} />
+                <PrivateRoute path="/about" component={About} />
+                <Route path="/test" component={Test} />
+                <PrivateRoute path="/products" component={ProductsList} />
+                <PrivateRoute path="/cart" component={Cart} />
                 <Footer/>
 
 

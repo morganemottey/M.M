@@ -1,32 +1,56 @@
+INSERT INTO users (login , password, active) 
+VALUES('momo', 'momo', 1);
 
+INSERT INTO users (login , password, active) 
+VALUES('dydy', 'dydy', 1);
 
-INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'momo', 'momo');
-INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(2, 'toto', 'toto');
-INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(3, 'tata', 'tata');
+INSERT INTO users (login , password, active) 
+VALUES ('toto', 'toto', 1);
 
-
-
-
-INSERT INTO `customer` (`login`, `password`, `name`, `mobile`, `email`, `address`, `city`, `state`,`id`) VALUES
-('momo', 'momo', 'Morgane', '9704159596', 'momo@gmail.com', 'PhilipeLeCompte', 'Hossegor', 'France',11),
-('toto', 'toto', 'Lisa', '9704159593', 'toto@gmail.com', 'Routedupont', 'Biarritz', 'France',12);
+INSERT INTO users (login , password, active) 
+VALUES ('titi', 'titi', 1);
 
 
 
-INSERT INTO `customer_cart` (`cartid`,`customerid` ,`product_name`, `details`, `price`, `quantity`, `date_added`) VALUES
-(4, 19, 'TeeShirt', 'Long Sleeve', 28.99, 1, '2014-11-11');
-INSERT INTO `customer_cart` (`cartid`,`customerid`, `product_name`, `details`, `price`, `quantity`, `date_added`) VALUES
-(5, 19, 'Pull', 'Coton', 128.99, 1, '2014-11-11');
-INSERT INTO `customer_cart` (`cartid`,`customerid`, `product_name`, `details`, `price`, `quantity`, `date_added`) VALUES
-(6, 19, 'Shirt', 'Long Sleeve', 38.99, 1, '2014-11-11');
-INSERT INTO `customer_cart` (`cartid`,`customerid` ,`product_name`, `details`, `price`, `quantity`, `date_added`) VALUES
-(7, 19, 'Trousers', 'Sleeve', 228.99, 1, '2014-11-11');
 
 
+INSERT INTO portfolio (pseudo, type, presentation, style, active, photo, insta) 
+VALUES ('Teeshirt', 'clothing', '100% coton', 'Outerwear', '1', 'http://localhost:5000/img/clothing/blazer/1.jpg', 'https://www.instagram.com/thefrankieshop/');
+INSERT INTO portfolio (pseudo, type, presentation, style, active, photo, insta) 
+VALUES ('Shirt', 'clothing', '100% coton', 'Outerwear', '1', 'http://localhost:5000/img/clothing/blazer/2.jpg', 'https://www.instagram.com/thefrankieshop/');
+INSERT INTO portfolio (pseudo, type, presentation, style, active, photo, insta) 
+VALUES ('Trousers', 'clothing', '100% coton', 'Outerwear', '1', 'http://localhost:5000/img/clothing/bottom/1.png', 'https://www.instagram.com/thefrankieshop/');
+INSERT INTO portfolio (pseudo, type, presentation, style, active, photo, insta) 
+VALUES ('Jeans', 'clothing', '100% coton', 'Outerwear', '1', 'http://localhost:5000/img/clothing/bottom/2.jpg', 'https://www.instagram.com/thefrankieshop/');
 
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_1',1,'http://localhost:5000/img/clothing/blazer/1.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing',1,'http://localhost:5000/img/clothing/blazer/2.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_2',1,'http://localhost:5000/img/clothing/bottom/1.png', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_3',1,'http://localhost:5000/img/clothing/bottom/2.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_4',1,'http://localhost:5000/img/clothing/bottom/3.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_5',1,'http://localhost:5000/img/clothing/bottom/4.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_6',1,'http://localhost:5000/img/clothing/bottom/4.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_7',1,'http://localhost:5000/img/clothing/bottom/5.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_8',1,'http://localhost:5000/img/clothing/bottom/6.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_9',1,'http://localhost:5000/img/clothing/bottom/7.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_10',1,'http://localhost:5000/img/clothing/img/shirt/1.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_11',1,'http://localhost:5000/img/clothing/img/shirt/2.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_12',1,'http://localhost:5000/img/clothing/img/shirt/3.jpg', 1);
+INSERT INTO images (alt_text , active , path , portfolio_id) 
+VALUES('clothing_13',1,'http://localhost:5000/img/clothing/img/shirt/4.jpg', 1);
 
 
 

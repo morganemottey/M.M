@@ -7,12 +7,14 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
+  Button,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+// import Logout from "./Logout"
+
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,6 +44,12 @@ const Header = (props) => {
             </NavItem>
             <NavItem>
               <NavLink href="/cart">Cart</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/test">Test</NavLink>
+            </NavItem>
+            <NavItem>
+              {/* <Button><Logout/></Button> */}
             </NavItem>
           </Nav> 
         </Collapse>

@@ -7,11 +7,17 @@ import ProductItem from "./productItem";
 import Cart from './cart'
 import Header from './Header';
 import Footer from './Footer'
+import axios from 'axios'
+
+
+
 
 class ProductsList extends React.Component {
     dispachAddToCart(product) {
         this.props.addToCart(product);
     }
+
+
     renderProducts() {
         return (
             this.props.products.map((p) => {
