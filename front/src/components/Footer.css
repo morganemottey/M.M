@@ -13,10 +13,16 @@ body {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 5px;
 
 }
-
+.input_newsletter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;   
+}
 
 .pourFlex {
     display: flex;
@@ -39,14 +45,18 @@ footer {
     color: black;
     margin: 0 0 30px 0;
 }
+a{
+color : black;
+}
 
 li {
     list-style-type: none;
+    color : black !important;
 }
 
 .cssImgIcones {
     width: 80px;
-    height: auto;
+    height: left;
     margin : 5px;
 }
 
@@ -61,7 +71,30 @@ li {
     }
     .cssImgIcones {
         width: 30px;
-        height: auto;
+        height: left;
     }
+    .pourFlex {
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: left;
+        justify-content: left;
+    
+    }
+    .flexReseauxSociaux {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: right;
+        align-items: right;
+        margin: 5px;
+    
+    }
+    .input_newsletter {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: right;
+        align-items: right;
+         
+    }
+  
 
 }

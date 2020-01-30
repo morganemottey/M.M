@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header'
-
+import Footer from './Footer'
 class About extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +26,9 @@ class About extends Component {
           Russia, Ukraine, Spain and many more. All the things you love about our brick and mortar store from the comfort 
           of your Pinterest-perfect studio.
           </p>
+          
         </div>
+        <Footer/>
       </div>
     )
   }

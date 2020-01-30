@@ -1,10 +1,10 @@
 const INIT_PRODUCTS = [
-    {id:1, title: 'Apples', description: 'some red apples', price: 30},
-    {id:2, title: 'Oranges', description: 'Peale\'em all', price: 25},
-    {id:3, title: 'Bananas', description: 'Some potassium for you', price: 20},
-    {id:4, title: 'Potatos', description: 'p for potato', price: 20},
-    {id:5, title: 'Onions', description: 'Damm, you gotta brush', price: 35},
-    {id:6, title: 'Ginger', description: 'Its good for your liver', price: 10}
+    {id:1, title: 'Teeshirt', description: '10% elasthane 30% coton', price: 30},
+    {id:2, title: 'Shirt', description: '100% coton', price: 25},
+    {id:3, title: 'Coat', description: '75% moer 10% coton', price: 120},
+    {id:4, title: 'Jeans', description: '100% jean', price: 89},
+    {id:5, title: 'Trousers', description: '10% elasthane 15% coton ', price: 75},
+    {id:6, title: 'Accessoires', description: '80% Or ', price: 49}
 ];
 export default function productsReducer(state=INIT_PRODUCTS, action={}) {
     // PLEASE NOTE:

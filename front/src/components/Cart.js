@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {deleteFromCart, updateItemUnits} from '../actions/cartActions';
 import {Col, Row, Badge} from 'react-bootstrap';
 import CartItem from "./cartItem";
+import Footer from './Footer'
 
 
 class Cart extends React.Component {
@@ -72,8 +73,14 @@ class Cart extends React.Component {
         }
 
         return (
-            
+            <div>
+                <Header/>
+                <div>
             <aside className='cart'>cart empty</aside>
+            </div>
+            <Footer/>
+            </div>
+           
         );
     }
 }
