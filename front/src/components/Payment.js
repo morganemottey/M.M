@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Header from './Header'
 import Footer from './Footer'
 import ModalPayment from './ModalPayment'
+import { Button} from 'reactstrap'
+import { NavLink} from 'react-router-dom'
 import Cart from './cart'
 import './about.css'
 
@@ -18,12 +20,10 @@ class Payment extends Component {
         <Header/>
         <div className>
         <h4>Cart</h4>
-        
-        <Cart/>
-        <p>Over the past years, MM Shop NYC and now Paris have been touted as the go-to place for unfussy, minimal, wallet-conscious styles. 
-          After all, every woman should be able to wear the garments that they inspire designers to make – no matter how high the rent gets!</p>
+            <Cart/>
         </div>
         <ModalPayment>button</ModalPayment>
+        <NavLink to="/products"><Button color="secondary">Return</Button></NavLink>
         
         <Footer/>
       </div>

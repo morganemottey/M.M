@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container } from 'reactstrap';
+import { NavLink} from 'react-router-dom'
+import './Home.css'
 
 class Home extends Component {
   constructor(props) {
@@ -10,8 +12,8 @@ class Home extends Component {
   }
   render() {
     return (
-        <div>
-        Shop Now
+        <div className= 'home_link'>
+        <NavLink to="/products">Shop Now</NavLink>
       </div>
     )
   }

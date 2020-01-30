@@ -1,4 +1,4 @@
-.carousel_containerl {
+.home_link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,14 +9,4 @@
     color: black !important;
     text-decoration: none;
     background-color: transparent;
-
 }
-
-.img_carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 15px;
-    width : 100%,
-}
-

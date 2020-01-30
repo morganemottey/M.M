@@ -55,13 +55,14 @@ const SlideHome = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img className="carousel" src={item.src} alt={item.altText} />
+        <img className="img_carousel" src={item.src} alt={item.altText} />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
     );
   });
 
   return (
+    <div className="carousel_container">
     <Carousel
       activeIndex={activeIndex}
       next={next}
@@ -72,6 +73,7 @@ const SlideHome = (props) => {
       <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>
+    </div>
   );
 }
 

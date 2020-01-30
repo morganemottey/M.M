@@ -2,7 +2,7 @@ import React from 'react';
 import {Col, Row, Button, Badge} from 'react-bootstrap';
 import Header from './Header'
 import Footer from './Footer'
-
+import { ListGroupItem} from 'reactstrap'
 class CartItem extends React.Component {
 
     render() {
@@ -10,23 +10,26 @@ class CartItem extends React.Component {
             
             <div className='cartItem'>
                 
-                <Row>
-                    <Col xs={12} sm={6}>
-                        <h5>{this.props.cartItem.title} <Badge pullRight>Price: $ {this.props.cartItem.price}</Badge></h5>
-                    </Col>
-                    <Col xs={6} sm={4}>
-                        <p>units :&nbsp;
-                            <div bsStyle='success'> {this.props.cartItem.units} </div>
-                            &nbsp;
-                            <Button bsSize='small' onClick={() => this.props.onAddUnit()}>+</Button>
-                            <Button bsSize='small' onClick={() => this.props.onDeductUnit()}>-</Button>
-                        </p>
-                    </Col>
-                    <Col xs={6} sm={2}>
+              
+                
+      
+                    <ListGroupItem>
+                        <h5>{this.props.cartItem.title} <Badge pullLeft>Price: $ {this.props.cartItem.price}</Badge></h5>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                       
+                            <div bsStyle='success'> quantity :&nbsp;{this.props.cartItem.units} </div>
+                            
+                            <Button  onClick={() => this.props.onAddUnit()}>+</Button>
+                            <Button  onClick={() => this.props.onDeductUnit()}>-</Button>
+                        
+              
+                    
                         <Button onClick={() => this.props.handleDeleteFromCart()}
-                                bsSize='small' style={{"backgroundColor" : "black"}}>DEL</Button>
-                    </Col>
-                </Row>
+                                 style={{"backgroundColor" : "black"}}>DEL</Button>
+                   
+                    </ListGroupItem>
+               
                 
             </div>
         );

@@ -18,8 +18,11 @@ const CartButton = (props) => {
   return (
     <div>
       <Button style={{color : "black"}} onClick={toggle}>{buttonLabel}</Button>
-      <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+      <Modal isOpen={modal} toggle={toggle} className={className} style={{border : "5px solid black"}}>
+        <ModalHeader toggle={toggle}>
+        <img src={require("../img/mm.png")}
+             style={{"border": "2px solid black" , "width" : "55px"}}/>
+        </ModalHeader>
         <ModalBody>
       <Cart/>
         </ModalBody>

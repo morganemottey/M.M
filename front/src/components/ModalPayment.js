@@ -13,7 +13,7 @@ const ModalPayment = (props) => {
 
   return (
     <div>
-      <Button style= {{backgroundColor :"black"}}  onClick={toggle}> Pay {buttonLabel}</Button>
+      <Button style= {{backgroundColor :"black"}}  onClick={toggle}>Pay {buttonLabel}</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Modal title</ModalHeader>
         <ModalBody>
