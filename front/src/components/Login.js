@@ -91,7 +91,10 @@ class Login extends Component {
               <div id="formFooter" class="fadeIn fourth">
                 <a class="underlineHover" href="#" onClick={this.onCreateProfile}>Créer profil</a><br />
                 <a class="underlineHover" href="#">Mot de passe oublié ?</a><br />
-                <a class="underlineHover" href="#" onClick={this.onReturn}>Retour</a>
+                <a class="underlineHover" href="/" 
+                
+                onClick={this.onReturn}>Retour</a>
+               
               </div>
             </div>
           </div>

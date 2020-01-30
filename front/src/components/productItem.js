@@ -8,8 +8,8 @@ class ProductItem extends React.Component {
             <div>
                 <Row>
                     <Col xs={12} className='productItem'>
-                        <h4>{this.props.product.title}</h4>
-                        <p>{this.props.product.description}</p>
+                        <h4>{this.props.product.pseudo}</h4>
+                        <p>{this.props.product.presentation}</p>
                         <p>Price: $ {this.props.product.price}</p>
                         <Button 
                         onClick={() => this.props.handleOnAdd(this.props.product)} 

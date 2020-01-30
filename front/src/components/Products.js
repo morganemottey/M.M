@@ -37,27 +37,7 @@ class Products extends Component {
 
       <div>
         <Header />
-
-        {products === null ? (
-          <div className="Guests-Loader">
-
-          </div>
-        ) : (
-            products.map(products => (
-
-              <Card>
-                <CardImg top width="100%" src={items.src} alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                  <Cart>Button</Cart>
-                </CardBody>
-              </Card>
-
-
-            ))
-          )}
+    <div>Toto</div>
 
         <Footer/>
       </div>

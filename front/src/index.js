@@ -15,13 +15,14 @@ import logger from 'redux-logger';
 import ProductsList from "./components/productsList";
 import Test from './components/Test'
 import Footer from "./components/Footer";
+import thunk from 'redux-thunk';
 // import Clothing from './components/Clothing'
 // import Logout from './components/Logout'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 
-const middleware = applyMiddleware(logger);
+const middleware = applyMiddleware(logger, thunk);
 const store = createStore(reducers, middleware);
 
 const PrivateRoute = (props) => {

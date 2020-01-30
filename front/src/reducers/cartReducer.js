@@ -6,7 +6,7 @@ export default function cartReducer(state=[], action={}) {
             let existingIndex = findProductIndex(state, action.payload.id);
             if (existingIndex !== -1) {
                 state[existingIndex].units += 1;
-                return state.concat([]);
+                return state;
             }
             return state.concat(action.payload);
 

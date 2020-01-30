@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
-app.use("/img", express.static(__dirname + "/img"));
+app.use(express.static('assets'));
 
 //ROUTES : Partie Authentification
 
@@ -28,60 +28,6 @@ app.get("/", function(request, response) {
   response.json(user);
 });
 
-// File Upload
-
-//Upload des images avatar
-// app.post(`/upload/portfolio/:id/avatar`, function(req, res) {
-
-//   avatarUpload(req, res, function(err) {
-//     if (err instanceof multer.MulterError) {
-//       return res.status(500).json(err);
-//     } else if (err) {
-//       return res.status(500).json(err);
-//     } else {
-//       const infoAvatar = {
-//         alt_text: "portrait du tatoueur",
-//         active: "0",
-//         path: `http://localhost:5000/img/${req.params.id}/portrait.jpg `,
-//         portfolio_id: `${req.params.id}`
-//       };
-//       console.log(infoAvatar);
-//       connection.query("INSERT INTO images SET ?", infoAvatar);
-//       return res.status(200).send(req.file);
-//     }
-
-//   });
-// });
-
-//////Upload des images realisation
-// app.post(`/upload/portfolio/:id/images`, function(req, res) {
-//   imagesUpload(req, res, function(err) {
-//     if (err instanceof multer.MulterError) {
-//       return res.status(500).json(err);
-//     } else if (err) {
-//       return res.status(500).json(err);
-//     } else {
-//       for (let i = 0; i < req.files.length; i++) {
-//         const infoImages = {
-//           alt_text: `${req.files[i].originalname}`,
-//           active: "1",
-//           path: `http://localhost:5000/img/${req.params.id}/${req.files[i].originalname} `,
-//           portfolio_id: `${req.params.id}`
-//         };
-//         connection.query("INSERT INTO images SET ?", infoImages);
-//       }
-//       console.log(req.files);
-//       return res.status(200).send(req.file);
-//     }
-//   });
-// });
-
-
-
-
-
-
-/////////
 
 app.post("/login", function(request, response) {
   console.log("login", request.body);
@@ -119,7 +65,7 @@ app.post("/login", function(request, response) {
   }
 });
 
-app.get("/api/portfolios", verifyToken, (req, res) => {
+app.get("/api/products", verifyToken, (req, res) => {
   connection.query(" SELECT * from portfolio", (err, results) => {
     if (err) {
       console.log(err);
@@ -146,10 +92,6 @@ function verifyToken(req, res, next) {
   });
 }
 
-// //ROUTES Admin
-// //Formulaires USERS
-
-// //OK
 
 
 // ///////////////////////////////////////////////////////////////////////////////
@@ -215,72 +157,7 @@ app.get("/api/users", (req, res) => {
   });
 });
 
-// //Récupération des portfolios team
-// app.get("/api/portfolio/team", (req, res) => {
-//   connection.query(
-//     "SELECT * from portfolio WHERE type='team'",
-//     (err, results) => {
-//       if (err) {
-//         res.status(500).send("Erreur lors de la récupération des portfolios");
-//       } else {
-//         res.json(results);
-//       }
-//     }
-//   );
-// });
 
-// //Récupération des portfolios team actifs
-// app.get("/api/portfolio/team/active", (req, res) => {
-//   connection.query(
-//     "SELECT * from portfolio WHERE type='team' AND active='1'",
-//     (err, results) => {
-//       if (err) {
-//         res.status(500).send("Erreur lors de la récupération des portfolios");
-//       } else {
-//         res.json(results);
-//       }
-//     }
-//   );
-// });
-
-// //Récupération des portfolios guests
-// app.get("/api/portfolio/guest", (req, res) => {
-//   connection.query(
-//     "SELECT * from portfolio WHERE type='guest' ",
-//     (err, results) => {
-//       if (err) {
-//         res.status(500).send("Erreur lors de la récupération des portfolios");
-//       } else {
-//         res.json(results);
-//       }
-//     }
-//   );
-// });
-
-// //Récupération des portfolios guests actifs
-// app.get("/api/portfolio/guest/active", (req, res) => {
-//   connection.query(
-//     "SELECT * from portfolio WHERE type='guest' AND active='1'",
-//     (err, results) => {
-//       if (err) {
-//         res.status(500).send("Erreur lors de la récupération des portfolios");
-//       } else {
-//         res.json(results);
-//       }
-//     }
-//   );
-// });
-
-// //Récupération des photos homepage portfolios
-// app.get("/api/portfolio/:id/{name}", (req, res) => {
-//   connection.query("SELECT * from portfolio", (err, results) => {
-//     if (err) {
-//       res.status(500).send("Erreur lors de la récupération des portfolios");
-//     } else {
-//       res.json(results);
-//     }
-//   });
-// });
 
 //Récupération des images
 app.get("/api/images", (req, res) => {
@@ -309,96 +186,6 @@ app.get("/api/images/:id", (req, res) => {
 });
 
 
-
-// app.post("/api/customers", (req, res) => {
-//   const formData = req.body;
-//   connection.query(
-//     "INSERT INTO customers SET?",
-//     formData,
-//     async (err, results) => {
-//       if (err) {
-//         console.log(err);
-//         res
-//           .status(500)
-//           .send("erreur de récupération des données du formulaire Client");
-//       } else {
-//         console.log("YES ça fonctionne côté client !!!!!!!!!!!!!");
-//         try {
-//           //je mets dans mysql
-//           //j'envoie mon mail
-//           const sent = await sendMail(req.body);
-//           if (sent) {
-//             res.send({ message: "email client envoyé avec succès" });
-//           }
-//         } catch (error) {
-//           console.log("gg1", error);
-//           // throw new Error(error.message)
-//           res.status(500).send("erreur d'envoie du mail client");
-//         }
-//       }
-//     }
-//   );
-// });
-
-// // Récupération des données du formulaire guest de contactTatoueur
-// //envoi du mail guest au tatoueur
-// app.get("/api/guests", (req, res) => {
-//   connection.query("SELECT * from guests", (err, results) => {
-//     if (err) {
-//       res.status(500).send("Erreur lors de la récupération des guests");
-//     } else {
-//       res.json(results);
-//     }
-//   });
-// });
-
-// app.post("/api/guests", (req, res) => {
-//   const formData = req.body;
-//   connection.query(
-//     "INSERT INTO guests SET?",
-//     formData,
-//     async (err, results) => {
-//       if (err) {
-//         console.log(err);
-//         res
-//           .status(500)
-//           .send("erreur de récupération des données du formulaire Guest");
-//       } else {
-//         console.log("YES ça fonctionne côté guest !!!!!!!!!!!!!");
-//         try {
-//           //je mets dans mysql
-//           //j'envoie mon mail
-//           const sent = await sendMailGuest(req.body);
-//           if (sent) {
-//             res.send({ message: "email guest envoyé avec succès" });
-//           }
-//         } catch (error) {
-//           console.log("gg2", error);
-//           // throw new Error(error.message)
-//           res.status(500).send("erreur d'envoie du mail guest");
-//         }
-//       }
-//     }
-//   );
-// });
-
-// // Route pour l'envoi de Mails des clients avec sengrid : --------------------------------------------
-
-// app.post("/project", async (req, res) => {
-//   try {
-//     const sent = await sendMail(req.body);
-//     if (sent) {
-//       res.send({ message: "email envoyé avec succès" });
-//     }
-//   } catch (error) {
-//     throw new Error(error.message);
-//   }
-// });
-
-// //Server
-// app.get("/", (request, response) => {
-//   response.send("Bienvenue sur Express de piqueur de rue");
-// });
 
 app.listen(port, err => {
   if (err) {

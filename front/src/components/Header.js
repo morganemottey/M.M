@@ -7,11 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Button,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+ 
 } from 'reactstrap';
 // import Logout from "./Logout"
 
