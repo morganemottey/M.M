@@ -9,9 +9,6 @@ const INIT_PRODUCTS = {
     ]
 }
 export default function productsReducer(state = INIT_PRODUCTS, action = {}) {
-    // PLEASE NOTE:
-    // below actions are unused
-    // kept for instance - Ajinkya
     switch (action.type) {
         case 'SET_PRODUCTS':
             console.log("gg red",action)

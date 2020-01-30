@@ -87,7 +87,7 @@ class ProductsList extends React.Component {
 
                     {this.renderProducts()}
                 </Row>
-                {/* <Footer/> */}
+                <Footer/>
             </div>
         );
     }

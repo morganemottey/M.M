@@ -22,13 +22,7 @@ class Products extends Component {
       products: null,
     }
   }
-  componentDidMount() {
-    axios.get(`http://localhost:5000/api/clothing`).then(res => {
-      const productsData = res.data;
-      this.setState({ products: productsData });
-      console.log(this.state);
-    });
-  }
+
 
 
   render() {

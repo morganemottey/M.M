@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from './Header'
 import {Col, Row, Button, Badge} from 'react-bootstrap';
+import Header from './Header'
+import Footer from './Footer'
 
 class CartItem extends React.Component {
 
@@ -26,7 +27,7 @@ class CartItem extends React.Component {
                                 bsSize='small' style={{"backgroundColor" : "black"}}>DEL</Button>
                     </Col>
                 </Row>
-
+                
             </div>
         );
     }

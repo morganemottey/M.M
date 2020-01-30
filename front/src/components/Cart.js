@@ -76,11 +76,11 @@ class Cart extends React.Component {
         return (
             <div>
                 <div>
-                    <Header />
+                    
                     <div>
                     </div>
                     <aside className='cart'>Your cart is empty</aside>
-                    <Footer />
+                  
                 </div>
             </div>
 
