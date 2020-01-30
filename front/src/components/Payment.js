@@ -22,9 +22,16 @@ class Payment extends Component {
         <h4>Cart</h4>
             <Cart/>
         </div>
-        <ModalPayment>button</ModalPayment>
-        <NavLink to="/products"><Button color="secondary">Return</Button></NavLink>
-        
+        <div style={{
+                display : "flex",
+                justifyContent : "center",
+                alignItems : "center",
+                flexFlow: "column nowrap "
+            }}>
+        <ModalPayment style={{margin : "15px"}}>button</ModalPayment>
+        <NavLink to="/products">
+          <Button style={{margin : "15px"}}color="secondary">Return</Button></NavLink>
+        </div>
         <Footer/>
       </div>
     )

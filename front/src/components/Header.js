@@ -41,10 +41,10 @@ const Header = (props) => {
               <NavLink href="/login">Login</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/payment">Cart</NavLink>
+              <NavLink href="/register">Register</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/test">Test</NavLink>
+              <NavLink href="/payment">Cart</NavLink>
             </NavItem>
             <NavItem>
               {/* <Button><Logout/></Button> */}

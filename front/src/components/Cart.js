@@ -90,13 +90,16 @@ class Cart extends React.Component {
         }
 
         return (
-            <div>
+            <div style={{
+                display : "flex",
+                justifyContent : "center",
+                alignItems : "center",
+                flexFlow: "column nowrap "
+            }}>
                 <div>
-                    
                     <div>
-                    </div>
+            </div>
                     <aside className='cart'>Your cart is empty</aside>
-                  
                 </div>
             </div>
 

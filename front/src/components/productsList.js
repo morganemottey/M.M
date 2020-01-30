@@ -65,8 +65,12 @@ class ProductsList extends React.Component {
             this.props.products.map((p, index) => {
                 console.log('toto', p)
                 return (
-                    <Col className='productsList' xs={12} sm={6} md={4} key={p.id}>
-                        <Card>
+                    <Col className='productsList' 
+                         style= {{ 
+                            width : "100px",
+                        }}
+                        xs={12} sm={6} md={4} key={p.id}>
+                        <Card style = {{ "border" : "3px solid black", "margin" : "10px"}}>
                             <CardImg
                                 key={`profile-${index}`}
                                 src={`http://localhost:5000/${p.photo}`}

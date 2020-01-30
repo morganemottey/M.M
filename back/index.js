@@ -20,6 +20,16 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
 app.use(express.static('assets'));
+// stripes
+
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+
+(async () => {
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: 1099,
+    currency: 'usd',
+  });
+})();
 
 //ROUTES : Partie Authentification
 

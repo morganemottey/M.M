@@ -17,7 +17,17 @@ const CartButton = (props) => {
 
   return (
     <div>
-      <Button style={{color : "black"}} onClick={toggle}>{buttonLabel}</Button>
+      <Button style={{
+        "margin" : "15px",
+        "backgroundColor" : "white",
+        "display" : "flex",
+        "alignItems" : "right",
+        "justifyContent" : "right",
+        "flexFlow" : "row nowrap"}} 
+        onClick={toggle}>
+        <img 
+        style = {{"width" : "25px"}}
+        src={require("../img/paniiiiier.png")}/></Button>
       <Modal isOpen={modal} toggle={toggle} className={className} style={{border : "5px solid black"}}>
         <ModalHeader toggle={toggle}>
         <img src={require("../img/mm.png")}

@@ -3,6 +3,8 @@ import {Col, Row, Button, Badge} from 'react-bootstrap';
 import Header from './Header'
 import Footer from './Footer'
 import { ListGroupItem} from 'reactstrap'
+import axios from 'axios'
+
 class CartItem extends React.Component {
 
     render() {
@@ -18,15 +20,15 @@ class CartItem extends React.Component {
                     </ListGroupItem>
                     <ListGroupItem>
                        
-                            <div bsStyle='success'> quantity :&nbsp;{this.props.cartItem.units} </div>
+                            <div > quantity :&nbsp;{this.props.cartItem.units} </div>
                             
-                            <Button  onClick={() => this.props.onAddUnit()}>+</Button>
-                            <Button  onClick={() => this.props.onDeductUnit()}>-</Button>
+                            <Button  style ={{ "backgroundColor" : "grey"}}onClick={() => this.props.onAddUnit()}>+</Button>
+                            <Button  style ={{ "backgroundColor" : "grey"}}onClick={() => this.props.onDeductUnit()}>-</Button>
                         
               
                     
                         <Button onClick={() => this.props.handleDeleteFromCart()}
-                                 style={{"backgroundColor" : "black"}}>DEL</Button>
+                                 style={{"backgroundColor" : "black"}}> X </Button>
                    
                     </ListGroupItem>
                

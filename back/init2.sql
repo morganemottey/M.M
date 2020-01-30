@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `mystore`.`portfolio` (
   `pseudo` VARCHAR(255) NOT NULL,
   `type` VARCHAR(255) NOT NULL,
   `presentation` VARCHAR(255) NULL DEFAULT NULL,
-  `insta` VARCHAR(255) NULL DEFAULT NULL,
+  `price` INT(11) NULL,
   `active` TINYINT(4) NOT NULL DEFAULT '1',
   `startdate` VARCHAR(255) NULL DEFAULT NULL,
   `enddate` VARCHAR(255) NULL DEFAULT NULL,

@@ -2,7 +2,10 @@ body {
     margin: 0;
     padding: 0;
 }
-
+link {
+    color : black,
+   
+}
 .imgInclineeFooter {
     height: 50px;
     width: 100%;
