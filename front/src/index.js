@@ -16,6 +16,7 @@ import ProductsList from "./components/productsList";
 import Test from './components/Test'
 import Footer from "./components/Footer";
 import thunk from 'redux-thunk';
+import Payment from './components/Payment'
 // import Clothing from './components/Clothing'
 // import Logout from './components/Logout'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -50,6 +51,7 @@ ReactDOM.render(
                 <PublicRoute path="/login" component={Login} />
                 <PrivateRoute path="/about" component={About} />
                 <Route path="/test" component={Test} />
+                <Route path="/payment" component={Payment}/>
                 <PrivateRoute path="/products" component={ProductsList} />
                 <PrivateRoute path="/cart" component={Cart} />
                 <Footer/>

@@ -14,6 +14,7 @@ import {
 } from 'reactstrap';
 import { addToCart } from '../actions/cartActions'
 import { getProducts } from "../actions/productActions";
+import CartButton from './CartButton'
 
 
 class ProductsList extends React.Component {
@@ -21,11 +22,17 @@ class ProductsList extends React.Component {
         super(props);
         this.state = {
             img: null,
-            products: []
+            products: [],
+            modal : false,
 
         }
 
     }
+
+  toggle = () => {
+    const { modal } = this.state;
+    this.setState({ modal: !modal });
+  };
 
     componentDidMount() {
         this.props.getProducts()
@@ -82,7 +89,7 @@ class ProductsList extends React.Component {
         return (
             <div>
                 <Header />
-                <NavLink to="/cart">Cart</NavLink>
+                <CartButton ><NavLink to="/cart">Cart</NavLink></CartButton>
                 <Row style={{ margin: '15px' }}>
 
                     {this.renderProducts()}

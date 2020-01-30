@@ -10,6 +10,22 @@ import Footer from './Footer'
 
 
 class Cart extends React.Component {
+    constructor(props){
+        super(props);
+        this.state ={
+
+        }
+    }
+
+    toggle = () => {
+        const { modal } = this.state;
+        this.setState({ modal: !modal });
+      };
+    
+
+
+
+
     renderCart() {
         return (
             <div className='cartList' header='Cart' bsStyle='primary'>
