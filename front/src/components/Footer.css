@@ -55,9 +55,9 @@ li {
 }
 
 .cssImgIcones {
-    width: 80px;
+    width: 60px;
     height: left;
-    margin : 5px;
+    margin : 15px;
 }
 
 @media screen and (max-width: 1000px) {
