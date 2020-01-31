@@ -24,6 +24,9 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 
 
 
+
+const props = {width: 400, height: 250, zoomWidth: 500, img: "1.jpg"};
+
 const middleware = applyMiddleware(logger, thunk);
 const store = createStore(reducers, middleware);
 
@@ -45,6 +48,7 @@ const PublicRoute = (props) => {
 }
 
 ReactDOM.render(
+
     <Provider store={store}>
         <Router>
             <Switch>

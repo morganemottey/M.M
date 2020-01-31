@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Jumbotron, Container } from 'reactstrap';
 import { NavLink} from 'react-router-dom'
 import './Home.css'
+import ParallaxHome from './ParallaxHome'
 
 class Home extends Component {
   constructor(props) {
@@ -12,8 +13,11 @@ class Home extends Component {
   }
   render() {
     return (
-        <div className= 'home_link'>
+      <div>
+      <ParallaxHome/>
+      <div className= 'home_link'>
         <NavLink to="/products">Shop Now</NavLink>
+      </div>
       </div>
     )
   }

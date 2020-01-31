@@ -63,7 +63,7 @@ const SlideHome = (props) => {
 
   return (
     <div className="carousel_container">
-    <Carousel
+    {/* <Carousel
       activeIndex={activeIndex}
       next={next}
       previous={previous}
@@ -72,7 +72,7 @@ const SlideHome = (props) => {
       {slides}
       <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
+    </Carousel> */}
     </div>
   );
 }

@@ -77,7 +77,7 @@ class ProductsList extends React.Component {
                                 portfolio={p}
                                 index={index}
                                 alt="Card image cap" />
-
+                                
                             <CardBody>
                                 <ProductItem handleOnAdd={this.dispachAddToCart.bind(this)} product={p} />
                             </CardBody>

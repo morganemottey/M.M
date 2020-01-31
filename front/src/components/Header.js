@@ -19,7 +19,7 @@ const Header = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md" style= {{"borderBottomStyle" : "2px solid black"}}>
+      <Navbar color="light" light expand="md" style= {{"borderBottomStyle" : "2px solid black" ,}}>
         <NavbarBrand href="/">
           <img src={require("../img/mm.png")}
               style={{"border": "2px solid black" , "width" : "55px"}}/></NavbarBrand>
