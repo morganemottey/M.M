@@ -8,12 +8,12 @@ import {
 import Cart from './cart'
 import Footer from './Footer'
 
-const items= [
-  {
-    src: require("../img/2.jpg"),
-    caption: 'Slide 1'
-  },
-]
+// const items= [
+//   {
+//     src: require("../img/2.jpg"),
+//     caption: 'Slide 1'
+//   },
+// ]
 
 class Products extends Component {
   constructor(props) {

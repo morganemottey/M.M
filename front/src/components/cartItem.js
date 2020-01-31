@@ -24,7 +24,7 @@ class CartItem extends React.Component {
                             
                             <Button  style ={{ "backgroundColor" : "grey"}}onClick={() => this.props.onAddUnit()}>+</Button>
                             <Button  style ={{ "backgroundColor" : "grey"}}onClick={() => this.props.onDeductUnit()}>-</Button>
-                        
+
               
                     
                         <Button onClick={() => this.props.handleDeleteFromCart()}

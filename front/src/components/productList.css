@@ -1,0 +1,36 @@
+.card {
+    width: 86%;
+}
+
+.medium-zoom-image {
+    cursor: pointer;
+    cursor: zoom-in;
+    width: 53%;
+    display: flex;
+    transition: transform .3s cubic-bezier(.2,0,.2,1);
+    align-items: center;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+
+
+btn-primary {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: right;
+    align-items: right;
+    color: black;
+    
+   
+}

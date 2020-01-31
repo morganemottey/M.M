@@ -3,16 +3,21 @@ import React from 'react';
 import { Col, Container, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import Header from './Header'
 import Footer from './Footer'
+
+
 const Register = (props) => {
   return (
     <>
     <Header/>
+    
     <Form style={{
                 display : "flex",
                 justifyContent : "center",
                 alignItems : "center",
                 flexFlow: "column nowrap "
             }}>
+               <img src={require("../img/bfb37ccfcca4632dbbe5cf86a80414bd.jpg")} style={{ "width": "205px" }} id="icon" alt="User Icon" />
+    
       <Container style={{
                 display : "flex",
                 justifyContent : "center",
@@ -86,6 +91,7 @@ const Register = (props) => {
       
       <Button>Sign in</Button>
     </Form>
+    <img src={require("../img/bfb37ccfcca4632dbbe5cf86a80414bd.jpg")} style={{ "width": "205px" }} id="icon" alt="User Icon" />
     <Footer/>
     </>
   );

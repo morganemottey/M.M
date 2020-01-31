@@ -46,6 +46,7 @@ footer {
     justify-content: left;
     align-items: left;
     color: black;
+    text-decoration :none;
     margin: 0 0 30px 0;
 }
 a{

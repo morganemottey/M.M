@@ -13,7 +13,7 @@ class ProductItem extends React.Component {
                         <p>Price: $ {this.props.product.price}</p>
                         <Button 
                         onClick={() => this.props.handleOnAdd(this.props.product)} 
-                        style={{"backgroundColor" : "black"}}>ADD
+                        style={{"backgroundColor" : "black" }}>ADD
                         </Button>
                     </Col>
                 </Row>

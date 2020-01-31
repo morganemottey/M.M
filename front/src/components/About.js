@@ -18,7 +18,7 @@ class About extends Component {
         <p>Over the past years, MM Shop NYC and now Paris have been touted as the go-to place for unfussy, minimal, wallet-conscious styles. 
           After all, every woman should be able to wear the garments that they inspire designers to make – no matter how high the rent gets!</p>
         </div>
-        <img className= "img_about" src={require("../img/2.jpg")}></img>
+        <img className= "img_about" src={require("../img/982632b1a25edd23db6b3ce7f31b062f.jpg")}></img>
         <img className= "img_about"src={require("../img/3.jpg")}></img>
         <div className ="about_text">
           <p>

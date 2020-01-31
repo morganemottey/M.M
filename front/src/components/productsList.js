@@ -16,7 +16,7 @@ import { addToCart } from '../actions/cartActions'
 import { getProducts } from "../actions/productActions";
 import CartButton from './CartButton'
 import ReactMediumImg from 'react-medium-zoom'
-
+import './productList.css'
 
 class ProductsList extends React.Component {
     constructor(props) {
@@ -82,7 +82,6 @@ class ProductsList extends React.Component {
                                 index={index}
                                 onOpen={() => console.log('Image Open')}
                                 onClosed={() => console.log('Image closed')}
-                               
                                 alt="Card image cap" />
                                 
                             <CardBody>

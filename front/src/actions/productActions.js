@@ -2,10 +2,10 @@ import axios from "axios";
 export const ADD_PRODUCT = 'ADD_PRODUCT';
 export const UPDATE_PRODUCT = 'UPDATE_PRODUCT';
 
-export function addProduct({ id, title, description, price }) {
+export function addProduct({ id, title, description, price , photo }) {
     return {
         type: ADD_PRODUCT,
-        payload: { id, title, description, price }
+        payload: { id, title, description, price , photo }
     }
 }
 export function updateProduct({ id, title }) {
