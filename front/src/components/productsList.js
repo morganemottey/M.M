@@ -15,6 +15,7 @@ import {
 import { addToCart } from '../actions/cartActions'
 import { getProducts } from "../actions/productActions";
 import CartButton from './CartButton'
+import ReactMediumImg from 'react-medium-zoom'
 
 
 class ProductsList extends React.Component {
@@ -24,6 +25,8 @@ class ProductsList extends React.Component {
             img: null,
             products: [],
             modal : false,
+            isOpen : false,
+            photIndex : 0,
 
         }
 
@@ -43,6 +46,7 @@ class ProductsList extends React.Component {
         this.props.addToCart(product);
     }
 
+
     // getImages = async () => {
     //     try {
     //         console.log('GG');
@@ -59,30 +63,32 @@ class ProductsList extends React.Component {
     // };
 
 
+
+
     renderProducts = () => {
         console.log("gg", this.props.products)
         return (
             this.props.products.map((p, index) => {
                 console.log('toto', p)
                 return (
-                    <Col className='productsList' 
-                         style= {{ 
-                            width : "100px",
-                        }}
+                    <Col className='productsList' style= {{width : "100px"}}
                         xs={12} sm={6} md={4} key={p.id}>
                         <Card style = {{ "border" : "3px solid black", "margin" : "10px"}}>
-                            <CardImg
+                        <ReactMediumImg
+                            
                                 key={`profile-${index}`}
                                 src={`http://localhost:5000/${p.photo}`}
                                 portfolio={p}
                                 index={index}
+                                onOpen={() => console.log('Image Open')}
+                                onClosed={() => console.log('Image closed')}
+                               
                                 alt="Card image cap" />
                                 
                             <CardBody>
                                 <ProductItem handleOnAdd={this.dispachAddToCart.bind(this)} product={p} />
                             </CardBody>
                         </Card>
-
                     </Col>
                 );
             })

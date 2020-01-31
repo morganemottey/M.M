@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container } from 'reactstrap';
-import { NavLink} from 'react-router-dom'
+
 import './Home.css'
 import ParallaxHome from './ParallaxHome'
 
@@ -16,7 +16,7 @@ class Home extends Component {
       <div>
       <ParallaxHome/>
       <div className= 'home_link'>
-        <NavLink to="/products">Shop Now</NavLink>
+        {/* <NavLink to="/products">Shop Now</NavLink> */}
       </div>
       </div>
     )
