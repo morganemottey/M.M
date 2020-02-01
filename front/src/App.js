@@ -13,7 +13,7 @@ class App extends Component {
     super(props);
     const points = [];
     for (let i = 0; i < 1000; i++)
-      points.push({ x: randomOf(100), y: randomOf(100) });
+      points.push({ x: randomOf(100), y: randomOf(10) });
 
     this.state = {
       points
@@ -32,7 +32,7 @@ class App extends Component {
 
   addPoint = () => {
     const { points } = this.state;
-    points.push({ x: randomOf(300), y: randomOf(20) });
+    points.push({ x: randomOf(10), y: randomOf(20) });
     this.setState({ points });
   };
 
@@ -51,7 +51,7 @@ class App extends Component {
           <Point key={`${p.x}-${p.y}`} x={p.x} y={p.y} />
         ))}
         <Header/>
-        <SlideHome/>
+        {/* <SlideHome/> */}
         <Home/>
         <Footer/>
 

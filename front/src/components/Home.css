@@ -10,3 +10,43 @@
     text-decoration: none;
     background-color: transparent;
 }
+ .button_home {
+    color: black;
+    border: 2px solid black;
+    text-align: center;
+    padding: 2px;
+    width: 20%;
+    margin-left: 260px;
+ }
+.carre1{
+    margin-top : 25px;
+    width:200px; 
+    height:200px;  
+    text-decoration:none; 
+    color:white;
+    text-align:center; 
+    font-weight:bold; 
+    background-color:#000080;
+    padding:5px
+} 
+.carre2{
+    width:200px; 
+    height:200px;  
+    text-decoration:none; 
+    color:white;
+    text-align:center; 
+    font-weight:bold; 
+    background-color:#000080;
+    padding:5px
+} 
+.carre3{
+    width:200px; 
+    height:200px;  
+    text-decoration:none; 
+    color:white;
+    text-align:center; 
+    font-weight:bold; 
+    background-color:#000080;
+    padding:5px
+} 
+  

@@ -1,100 +1,92 @@
-
-import React from 'react';
-import { Col, Container, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import React, { Component } from 'react';
+import './Register.css';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { NavItem, NavLink } from 'reactstrap';
 import Header from './Header'
 import Footer from './Footer'
+const axios = require('axios');
 
 
-const Register = (props) => {
-  return (
-    <>
-    <Header/>
+class Register extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            register: this.getInitialState(),
+            showConfirmation: false,
+        }
+    }
+
+getInitialState = () => ({
+    firstname: "",
+    lastname: "",
+    birthday: "",
+    adress: "",
+    phone: "",
+    email: "",
     
-    <Form style={{
-                display : "flex",
-                justifyContent : "center",
-                alignItems : "center",
-                flexFlow: "column nowrap "
-            }}>
-               <img src={require("../img/bfb37ccfcca4632dbbe5cf86a80414bd.jpg")} style={{ "width": "205px" }} id="icon" alt="User Icon" />
-    
-      <Container style={{
-                display : "flex",
-                justifyContent : "center",
-                alignItems : "center",
-                flexFlow: "column nowrap "
-            }}>
-        <Col md={6}>
-        <FormGroup style={{
-                display : "flex",
-                justifyContent : "center",
-                alignItems : "center",
-                flexFlow: "column nowrap "
-            }}>
-            <Label for="exampleEmail">Email</Label>
-            <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-          </FormGroup>
-        </Col>
-        <Col md={6}>
-        <FormGroup style={{
-                display : "flex",
-                justifyContent : "center",
-                alignItems : "center",
-                flexFlow: "column nowrap "
-            }}>
-            <Label for="examplePassword">Password</Label>
-            <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
-          </FormGroup>
-        </Col>
-      </Container>
-      <Container style={{
-                display : "flex",
-                justifyContent : "left",
-                alignItems : "left",
-                flexFlow: "column nowrap "
-            }}>
-      <FormGroup>
-        <Label for="exampleAddress">Address</Label>
-        <Input type="text" name="address" id="exampleAddress" placeholder="1234 Main St"/>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleAddress2">Address 2</Label>
-        <Input type="text" name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor"/>
-      </FormGroup>
-      </Container>
-      <Container style={{
-                display : "flex",
-                justifyContent : "center",
-                alignItems : "center",
-                flexFlow: "column nowrap "
-            }}>
-        <Col md={6}>
-          <FormGroup>
-            <Label for="exampleCity">City</Label>
-            <Input type="text" name="city" id="exampleCity"/>
-          </FormGroup>
-        </Col>
-        <Col md={4}>
-          <FormGroup>
-            <Label for="exampleState">State</Label>
-            <Input type="text" name="state" id="exampleState"/>
-          </FormGroup>
-        </Col>
-        
-        <Col md={2}>
-          <FormGroup>
-            <Label for="exampleZip">Zip</Label>
-            <Input type="text" name="zip" id="exampleZip"/>
-          </FormGroup>  
-        </Col>
-      </Container>
-      
-      <Button>Sign in</Button>
-    </Form>
-    <img src={require("../img/bfb37ccfcca4632dbbe5cf86a80414bd.jpg")} style={{ "width": "205px" }} id="icon" alt="User Icon" />
-    <Footer/>
-    </>
-  );
+
+})
+
+
+    handleChangeInputRegister = (e) => {
+        const {register} = this.state;
+        register[e.target.name]=e.target.value
+        this.setState({ register })
+    }
+
+    handleSubmitFormRegister = (event) => {
+        console.log('Le formregisters a été soumis : ', this.state);
+        let { register} = this.state;
+        axios
+            .post("http://localhost:5000/api/register", register)
+        this.setState({
+           register: this.getInitialState(),
+            showConfirmation: true
+        })
+        event.preventDefault();
+    } 
+
+    render() {
+        return (
+            <div>
+              <Header/>
+                {this.state.showConfirmation === false ? (
+                <form className="FlexFormContainerRegister" onSubmit={this.handleSubmitFormRegister} method="POST" action='/api/register'>
+                    <h1 className="h1formGuest">Register</h1>
+
+                    <input className="inputForm" name="firstname" type="text" onChange={this.handleChangeInputRegister} value={this.state.firstname} placeholder="firstname :" required></input>
+
+                    <input className="inputForm" name="lastname" type="text" onChange={this.handleChangeInputRegister} value={this.state.lastname} placeholder="lastname" required></input>
+
+                    <input className="inputForm" name="pseudo" type="text" onChange={this.handleChangeInputRegister} value={this.state.birthday} placeholder="birthday :" ></input>
+                    
+                    <input className="inputForm" name="compte" type="text" onChange={this.handleChangeInputRegister} value={this.state.adress} placeholder="adress"></input>
+
+                    <input className="inputForm" name="phoneG" type="tel" onChange={this.handleChangeInputRegister} value={this.state.phone} size={10} minLength={1} maxLength={10} 
+                    placeholder="Votre numéro de téléphone :" required></input>
+                    
+                    <input className="inputForm" name="email" type="email" onChange={this.handleChangeInputRegister} 
+                    value={this.state.email} placeholder="mail :" required></input>
+                    
+                    <button className="buttonForm" type="submit">
+                        Register
+                    </button>
+                    <Footer/>
+                </form>
+                ) : (
+                <div>
+                    <p>Your request has been sent !</p>
+                    <p>We will respond as soon as possible</p>
+                    <p>Thank you</p>
+                    <NavItem>
+                        <NavLink href="/" className="styleLink"></NavLink>
+                    </NavItem>
+                </div>
+                )}
+            </div>
+        );
+    }
 }
 
 export default Register;

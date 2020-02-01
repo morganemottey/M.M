@@ -9,10 +9,9 @@ class Point extends Component {
     this.state = {};
   }
 
-  //WARNING! To be deprecated in React v17. Use new lifecycle static getDerivedStateFromProps instead.
+  
   componentWillReceiveProps(nextProps) {
-    // this.r = randomOf(50);
-    // this.c = `rgb(${randomOf(256)},${randomOf(256)},${randomOf(256)})`;
+
   }
   render() {
     const { x, y } = this.props;

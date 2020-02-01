@@ -6,7 +6,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 
 
 CREATE SCHEMA IF NOT EXISTS `mystore` DEFAULT CHARACTER SET utf8 ;
-USE `mystore` ;
+USE `mystore`;
 
 -- -----------------------------------------------------
 -- Table `mystore`.`portfolio`
@@ -107,22 +107,22 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 -- Table `mystore`.`customers`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mystore`.`customers` (
-  `id` INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+
+
+CREATE TABLE IF NOT EXISTS `mystore`.`register` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(70) NOT NULL,
   `lastName` VARCHAR(70) NOT NULL,
-  `age` INT(11) NULL,
-  `phone` VARCHAR(15) NOT NULL,
-  `email` VARCHAR(150) NOT NULL,
-  `tattoolocation` TEXT NULL,
-  `hauteur` INT NULL,
-  `largeur` INT NULL,
-  `budget` INT NULL,
-  `story` TEXT NULL
-);
+  `birthday` VARCHAR(70) NOT NULL,
+  `adress` VARCHAR(70) NOT NULL,
+  `phone` VARCHAR(70) NOT NULL,
+  `email` VARCHAR(70) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 -- -----------------------------------------------------
--- Table `mystore`.`guests`
+-- Table `mystore`.`register`
 -- -----------------------------------------------------
 
 

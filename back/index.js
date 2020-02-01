@@ -20,16 +20,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(cors());
 app.use(express.static('assets'));
-// stripes
 
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
-
-(async () => {
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: 1099,
-    currency: 'usd',
-  });
-})();
 
 //ROUTES : Partie Authentification
 
@@ -190,6 +181,50 @@ app.get("/api/images/:id", (req, res) => {
         res.status(500).send("Erreur lors de la récupération des images");
       } else {
         res.json(results);
+      }
+    }
+  );
+});
+
+//Register 
+
+// Récupération des données du formulaire guest de contactTatoueur
+//envoi du mail guest au tatoueur
+app.get("/api/guests", (req, res) => {
+  connection.query("SELECT * from guests", (err, results) => {
+    if (err) {
+      res.status(500).send("Erreur lors de la récupération des guests");
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+app.post("/api/register", (req, res) => {
+  const formData = req.body;
+  connection.query(
+    "INSERT INTO register SET?",
+    formData,
+    async (err, results) => {
+      if (err) {
+        console.log(err);
+        res
+          .status(500)
+          .send("erreur de récupération des données du formulaire Guest");
+      } else {
+        console.log("YES ça fonctionne côté guest !!!!!!!!!!!!!");
+        try {
+          //je mets dans mysql
+          //j'envoie mon mail
+          const sent = await sendMailRegister(req.body);
+          if (sent) {
+            res.send({ message: "email guest envoyé avec succès" });
+          }
+        } catch (error) {
+          console.log("gg2", error);
+          // throw new Error(error.message)
+          res.status(500).send("erreur d'envoie du mail guest");
+        }
       }
     }
   );

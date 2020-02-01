@@ -16,6 +16,7 @@ import { addToCart } from '../actions/cartActions'
 import { getProducts } from "../actions/productActions";
 import CartButton from './CartButton'
 import ReactMediumImg from 'react-medium-zoom'
+
 import './productList.css'
 
 class ProductsList extends React.Component {
@@ -98,6 +99,7 @@ class ProductsList extends React.Component {
         return (
             <div>
                 <Header />
+               
                 <CartButton ><NavLink to="/cart">Cart</NavLink></CartButton>
                 <Row style={{ margin: '15px' }}>
 
