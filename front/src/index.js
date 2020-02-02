@@ -16,11 +16,17 @@ import ProductsList from "./components/productsList";
 import Footer from "./components/Footer";
 import thunk from 'redux-thunk';
 import Payment from './components/Payment'
-import Register from './components/Register';
+import Contact from './components/Contact';
 // import Clothing from './components/Clothing'
 // import Logout from './components/Logout'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import Outerwear from './components/Outerwear';
+import Tops from './components/Tops';
+import Bottoms from './components/Bottoms';
+import Dresses from './components/Dresses';
+import Sale from './components/Sale';
+import Accessoires from './components/Accessoires';
 
 
 
@@ -57,9 +63,15 @@ ReactDOM.render(
                 <PrivateRoute exact path="/home" component ={Home}/>
                 <PublicRoute path="/login" component={Login} />
                 <PrivateRoute path="/about" component={About} />
-                <PrivateRoute path="/register" component={Register} />
+                <PrivateRoute path="/contact" component={Contact} />
                 <PrivateRoute path="/payment" component={Payment}/>
                 <PrivateRoute path="/products" component={ProductsList} />
+                <PrivateRoute path="/outerwear" component={Outerwear} />
+                <PrivateRoute path="/tops" component={Tops} />
+                <PrivateRoute path="/bottoms" component={Bottoms} />
+                <PrivateRoute path="/dresses" component={Dresses} />
+                <PrivateRoute path="/sale" component={Sale} />
+                <PrivateRoute path="/accessoires" component={Accessoires} />
                 <PrivateRoute path="/cart" component={Cart} />
                 <Footer/>
            

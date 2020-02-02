@@ -30,46 +30,50 @@ const Header = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-          {/* <NavItem>
-              <NavLink href="/">Home</NavLink>
-            </NavItem> */}
+          <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Clothing
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+                <NavLink href="/outerwear">Outerwear</NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                <NavLink href="/tops">Tops</NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                <NavLink href="/dresses">Dresses</NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                <NavLink href="/sale">Sale</NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                <NavLink href="/accessoires">Accessoires</NavLink>
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>
+                <NavLink href="/logout">Logout</NavLink>
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            
+            <Nav className="navbar_left" navbar>
             <NavItem>
-              <NavLink href="/products">Clothing</NavLink>
+              <NavLink className="navbar_left" href="/about">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/about">About</NavLink>
-            </NavItem>
-            <br>
-            </br>
-            <NavItem>
-              <NavLink href="/login">Login</NavLink>
+              <NavLink className="navbar_left" href="/login">Login</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/register">Register</NavLink>
+              <NavLink className="navbar_left" href="/contact">Contact</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/payment">Cart</NavLink>
+              <NavLink className="navbar_left" href="/payment">Cart</NavLink>
             </NavItem>
             <NavItem>
               {/* <Button><Logout/></Button> */}
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            </Nav>
           </Nav> 
         </Collapse>
       </Navbar>
