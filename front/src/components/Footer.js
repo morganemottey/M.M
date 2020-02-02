@@ -29,11 +29,11 @@ class Login extends Component {
                                 <div><img src={facebook} className="cssImgIcones"/></div>
                                 <div><img src={instagram} className="cssImgIcones"/></div>
                             </div>
-                           {/* <div className="input_newsletter">
-                            <input
                             
-                            style= {{"backgroundColor": "black" }}></input>
-                           </div> */}
+                           <div className="wrapper">
+                            <input className = "input" placeholder="Newsletter" type ="text"></input>
+                            <span className="underline"></span>
+                           </div>
                             <ul className="cssDesLiens" >
                                 <li style = {{color : "black"}}><Link to="/About" >About</Link></li>
                                 <li><Link >Newsleter</Link></li>

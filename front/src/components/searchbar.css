@@ -1,0 +1,57 @@
+input {
+	margin: 50px 0;
+	background: none;
+	border-bottom: 1px solid white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	width: 200px;
+	height: 30px;
+}
+
+input:focus {
+	outline: none;
+	border-bottom: 3px solid white;
+	color: white;
+}
+
+::-webkit-input-placeholder {
+	color: white;
+	font-weight: bold;
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	color: white;
+	font-weight: bold;
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: white;
+	font-weight: bold;
+}
+
+:-ms-input-placeholder {
+	color: white;
+	font-weight: bold;
+}
+
+button {
+	width: 50px;
+	height: 50px;
+	background: none;
+	border: none;
+	position: absolute;
+	top: 200px;
+	left: 275px;
+}
+
+button:focus {
+	outline: none;
+}
+
+.fas {
+	color: white;
+	font-size: 2em;
+}

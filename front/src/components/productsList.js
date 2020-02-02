@@ -19,6 +19,7 @@ import ReactMediumImg from 'react-medium-zoom'
 
 import './productList.css'
 
+
 class ProductsList extends React.Component {
     constructor(props) {
         super(props);
@@ -101,6 +102,7 @@ class ProductsList extends React.Component {
                 <Header />
                
                 <CartButton ><NavLink to="/cart">Cart</NavLink></CartButton>
+                
                 <Row style={{ margin: '15px' }}>
 
                     {this.renderProducts()}
